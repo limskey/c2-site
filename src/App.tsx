@@ -9,8 +9,7 @@ import MTSAPage from './pages/MTSAPage'
 import HealthcarePage from './pages/HealthcarePage'
 import AboutPage from './pages/AboutPage'
 import BlogPage from './pages/BlogPage'
-import BlogCMMCGapAssessment from './pages/BlogCMMCGapAssessment'
-import BlogSeaportCybersecurity from './pages/BlogSeaportCybersecurity'
+import BlogPost from './pages/BlogPost'
 import RequestConsultationPage from './pages/RequestConsultationPage'
 import CareersPage from './pages/CareersPage'
 
@@ -35,8 +34,7 @@ function Layout() {
           <Route path="/services/healthcare" element={<HealthcarePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/cmmc-gap-assessment" element={<BlogCMMCGapAssessment />} />
-          <Route path="/blog/americas-seaport-cybersecurity" element={<BlogSeaportCybersecurity />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/request-consultation" element={<RequestConsultationPage />} />
           <Route path="/careers" element={<CareersPage />} />
         </Routes>

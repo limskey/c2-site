@@ -1,28 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Calendar, ArrowRight, Tag } from 'lucide-react'
-
-export const blogPosts = [
-  {
-    slug: 'cmmc-gap-assessment',
-    title: 'CMMC Gap Assessment: What to Expect (and What Most Companies Get Wrong)',
-    excerpt:
-      'A CMMC gap assessment is the difference between knowing you\'ll pass and hoping you will. Skip it, and the first time you find out where your company stands is when a C3PAO walks in for the real thing.',
-    date: 'June 2026',
-    category: 'CMMC',
-    readTime: '12 min read',
-    image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800',
-  },
-  {
-    slug: 'americas-seaport-cybersecurity',
-    title: "America's Seaport Cybersecurity",
-    excerpt:
-      'The United States moves roughly $5 trillion in trade every year. Nearly all of it touches a seaport. For years, the cybersecurity posture protecting that infrastructure has been voluntary — that just changed.',
-    date: 'May 2026',
-    category: 'MTSA',
-    readTime: '15 min read',
-    image: 'https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg?auto=compress&cs=tinysrgb&w=800',
-  },
-]
+import { posts } from '../posts'
 
 export default function BlogPage() {
   return (
@@ -45,7 +23,7 @@ export default function BlogPage() {
       <section className="py-16 bg-slate-50">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            {blogPosts.map((post) => (
+            {posts.map((post) => (
               <article
                 key={post.slug}
                 className="rounded-2xl bg-white border border-slate-200 overflow-hidden hover:shadow-xl hover:border-blue-200 transition-all duration-300 flex flex-col"
