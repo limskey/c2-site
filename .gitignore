@@ -1,0 +1,19 @@
+# Dependencies. Cloudflare installs these during the build; committing them
+# once put 7,481 files into a staged commit by accident.
+node_modules/
+
+# dist/ is deliberately NOT ignored. wrangler.jsonc serves ./dist as the
+# Worker's assets, and the committed copy is what a manual `wrangler deploy`
+# would upload. Ignoring it here would quietly stop tracking a directory the
+# deploy configuration still points at.
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor and OS
+.DS_Store
+*.local
+.vscode/
+.idea/
