@@ -47,7 +47,7 @@ export default function CareersPage() {
                 protecting critical systems, we want to hear from you.
               </p>
               <a
-                href="https://careers.cyber-coalition.com/jobs/Careers"
+                href="https://jobs.gusto.com/boards/cyber-coalition-llc-24b2a5ab-7750-4378-a301-fd1580b9a831"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg bg-blue-500 hover:bg-blue-400 text-white font-semibold transition-colors shadow-lg shadow-blue-500/20"
