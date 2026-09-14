@@ -53,6 +53,28 @@ export default function RequestConsultationPage() {
         message: form.message || null,
       })
       if (error) throw error
+            // Notify info@ via the existing edge function
+      const details = [
+        form.phone ? `Phone: ${form.phone}` : '',
+        form.timeline ? `Timeline: ${form.timeline}` : '',
+        '',
+        form.message || '(no message provided)',
+      ].filter(Boolean).join('\n')
+
+      await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          organization: form.organization,
+          service: form.service,
+          message: details,
+        }),
+      }).catch(() => {})
       setStatus('success')
       setForm({ name: '', email: '', phone: '', organization: '', service: '', timeline: '', message: '' })
     } catch {
