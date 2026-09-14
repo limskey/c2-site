@@ -8,7 +8,7 @@ const corsHeaders = {
 };
 
 const RECIPIENT = "info@cyber-coalition.com";
-const FROM = "CyberCoalition Website <noreply@resend.dev>";
+const FROM = "CyberCoalition Website <noreply@cyber-coalition.com>";
 
 Deno.serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
